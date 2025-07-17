@@ -1,0 +1,118 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0A192F;
+  color: #CCD6F6;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container structure */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  gap: 50px;
+}
+
+.avatar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: sticky;
+  top: 50px;
+  height: fit-content;
+}
+
+.avatar img {
+  width: 250px;
+  border-radius: 10px;
+  border: 3px solid #64FFDA;
+}
+
+/* Main content */
+.content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+section {
+  background-color: #112240;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border-left: 5px solid #64FFDA;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Slide-in animations */
+section.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+section.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Alternate animation directions */
+section:nth-child(even).visible {
+  transform: translateX(100px);
+}
+
+section:nth-child(odd).visible {
+  transform: translateX(-100px);
+}
+
+/* Apply visible class with animation */
+section.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Headings */
+h2 {
+  color: #64FFDA;
+  margin-bottom: 10px;
+}
+
+/* Section text */
+p {
+  color: #8892B0;
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #8892B0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar img {
+    width: 180px;
+  }
+}
+strong {
+  color: #64FFDA;
+  font-weight: bold;
+}
+
