@@ -1,6 +1,7 @@
 import { Navbar } from "./components/sections/Navbar";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
+import { Experience } from "./components/sections/Experience";
 import { FeaturedProject } from "./components/sections/FeaturedProject";
 import { ProjectsSection } from "./components/sections/Projects";
 import { BuildProcess } from "./components/sections/BuildProcess";
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <FeaturedProject />
         <ProjectsSection />
         <BuildProcess />

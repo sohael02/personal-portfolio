@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Mail, Code, ExternalLink, Download, ArrowUpRight } from "lucide-react";
-import { Button } from "../ui/Button";
+import { Mail, Code, ExternalLink, ArrowUpRight } from "lucide-react";
+
 import { personalInfo } from "../../data/portfolio";
 
 const LinkedInIcon = () => (
@@ -35,7 +35,7 @@ export function Contact() {
     {
       icon: GitHubIcon,
       label: "GitHub",
-      value: "github.com/sohaelshaik",
+      value: "github.com/sohael02",
       href: personalInfo.github,
       color: "slate",
       external: true,
@@ -43,7 +43,7 @@ export function Contact() {
     {
       icon: Code,
       label: "LeetCode",
-      value: "leetcode.com/sohaelshaik",
+      value: "leetcode.com/u/sohael",
       href: personalInfo.leetcode,
       color: "amber",
       external: true,
@@ -111,25 +111,6 @@ export function Contact() {
             );
           })}
         </div>
-
-        <motion.div
-          className="p-8 md:p-12 rounded-2xl bg-white border border-slate-200 text-center max-w-xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          <h3 className="text-2xl font-bold text-text mb-4">Get in Touch</h3>
-          <p className="text-muted mb-8">
-            My resume is available for download below. Feel free to reach out via email or any of the channels above for internship opportunities or project discussions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" href="/resume.pdf" download="Sohael_Shaik_Resume.pdf">
-              <Download className="w-5 h-5" />
-              Download Resume
-            </Button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

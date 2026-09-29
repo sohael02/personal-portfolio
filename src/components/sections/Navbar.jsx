@@ -19,6 +19,7 @@ export function Navbar() {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
+    { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
@@ -57,9 +58,6 @@ export function Navbar() {
                 {link.label}
               </motion.a>
             ))}
-            <Button size="sm" href="#projects">
-              View Projects
-            </Button>
           </div>
 
           <div className="md:hidden flex items-center gap-4">
@@ -96,9 +94,6 @@ export function Navbar() {
                 {link.label}
               </motion.a>
             ))}
-            <Button className="w-full" href="#projects">
-              View Projects
-            </Button>
           </div>
         </motion.div>
       </nav>
